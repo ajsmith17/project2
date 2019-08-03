@@ -4,8 +4,10 @@ console.log(process.env.MONGODB_URI);
 //___________________
 const express = require('express');
 const methodOverride  = require('method-override');
-const mongoose = require ('mongoose');
-const app = express ();
+const mongoose = require('mongoose');
+const session = require('express-session');
+require('dotenv').config();
+const app = express();
 const db = mongoose.connection;
 //___________________
 //Port
@@ -45,15 +47,34 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
-
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: false
+}))
 
 //___________________
 // Routes
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  res.render('logIndex.ejs', {
+    currentUser: req.session.currentUser
+  });
 });
+
+app.get('/app', (req, res) => {
+  if (req.session.currentUser) {
+    res.render('app/index.ejs');
+  } else {
+    res.redirect('/sessions/new');
+  }
+});
+
+const userController = require('./controllers/users.js');
+app.use('/users', userController);
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController);
 
 //___________________
 //Listener

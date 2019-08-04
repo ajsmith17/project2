@@ -75,6 +75,9 @@ const userController = require('./controllers/users.js');
 app.use('/users', userController);
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
+const notesController = require('./controllers/notesC.js');
+app.use('/app', notesController);
+
 
 //___________________
 //Listener

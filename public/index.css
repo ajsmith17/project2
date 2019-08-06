@@ -1,0 +1,14 @@
+body {
+  background-image: url("https://photo-cdn.icons8.com/assets/previews/151/68921a8c-e6e2-44cd-b865-e75b372573801x.jpg");
+  color: black;
+}
+div {
+  background-color: lightyellow;
+  box-shadow: 2px 2px black;
+  width: 30%;
+  height: 200px;
+  margin: 5px;
+}
+span {
+  display: flex;
+}

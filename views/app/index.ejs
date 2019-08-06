@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="/index.css">
   </head>
   <body>
     <header>
@@ -19,21 +20,16 @@
         </form>
         <button type="button" onclick="window.location.href='/app/<%=notes[i].id%>/edit'">EDIT</button>
         <span>
-          <h4><%=notes[i].title%></h4>
-          <p><%=notes[i].publishDate%></p>
+          <a href="/app/<%=notes[i].id;%>"><h3><%=notes[i].title%></h3></a>
+          <% let date = notes[i].publishDate; %>
+          <p><%=date.toDateString()%></p>
         </span>
-
-        <p><%=notes[i].content%></p>
+        <% let string = notes[i].content; %>
+        <% let array = string.split(" ", 3); %>
+        <% let final = array.join(" "); %>
+        <p><%=final + '...'%></p>
       </div>
     <% } %>
-    <style media="screen">
-      body {
-        background-image: url("https://photo-cdn.icons8.com/assets/previews/151/68921a8c-e6e2-44cd-b865-e75b372573801x.jpg");
-        color: black;
-      }
-      div {
-        background-color: lightyellow;
-      }
-    </style>
+
   </body>
 </html>

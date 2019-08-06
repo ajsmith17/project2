@@ -1,4 +1,3 @@
-console.log(process.env.MONGODB_URI);
 //___________________
 //Dependencies
 //___________________

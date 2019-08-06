@@ -5,6 +5,23 @@
     <title></title>
   </head>
   <body>
-    <h1>Working</h1>
+    <header>
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input class="waves-effect waves-light btn" type="submit" value="Log Out">
+      </form>
+    </header>
+    <button type="button" onclick="window.location.href='/app/new'">New Note</button>
+
+    <% for (let i = 0; i < notes.length; i++) { %>
+      <div class="note">
+        <span>
+          <h4><%=notes[i].title%></h4>
+          <p><%=notes[i].publishDate%></p>
+        </span>
+
+        <p><%=notes[i].content%></p>
+      </div>
+    <% } %>
+
   </body>
 </html>

@@ -63,20 +63,20 @@ app.get('/' , (req, res) => {
   });
 });
 
-app.get('/app', (req, res) => {
-  if (req.session.currentUser) {
-    res.render('app/index.ejs');
-  } else {
-    res.redirect('/sessions/new');
-  }
-});
+// app.get('/app', (req, res) => {
+//   if (req.session.currentUser) {
+//     res.render('app/index.ejs');
+//   } else {
+//     res.redirect('/sessions/new');
+//   }
+// });
 
 const userController = require('./controllers/users.js');
 app.use('/users', userController);
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);
 const notesController = require('./controllers/notesC.js');
-app.use('/app', notesController);
+app.use('/', notesController);
 
 
 //___________________

@@ -16,6 +16,8 @@ body {
   height: 500px;
   margin-right: 20px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .greeting {
   background-color: lightyellow;
@@ -38,8 +40,21 @@ body {
   margin-top: 7px;
   background-image: radial-gradient(red 50%, black 100%);
 }
+.text {
+  margin: 100px auto;
+}
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
+p {
+  font-family: 'Reenie Beanie', cursive;
+  text-align: center;
+  margin: 0 20px;
+  font-size: 140%;
+}
 .newButton {
-color: #fff !important;
+color: white;
 text-transform: uppercase;
 font-family: 'Reenie Beanie', cursive;
 font-size: 140%;
@@ -47,7 +62,7 @@ font-weight: bold;
 text-decoration: none;
 background: #ed3330;
 padding: 10px;
-width: 120px;
+width: 135px;
 margin: 0 auto;
 border-radius: 5px;
 display: inline-block;

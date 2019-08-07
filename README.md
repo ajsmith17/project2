@@ -1,6 +1,6 @@
 # Note.js
 
-Note.js is a full CRUD app that uses a variety of NPM packages as well as front end languages. The user upon authentication will have a virtual bulletin board that they can pin notes to, whether they be motivational, a reminder, or whatever else they would like. Being full CRUD, the user can edit and delete their different notes and create new ones whenever they want.
+Note.js is a full CRUD app that uses a variety of NPM packages as well as front end languages, and is deployed via Heroku. The user upon authentication will have a virtual bulletin board that they can pin notes to, whether they be motivational, a reminder, or whatever else they would like. Being full CRUD, the user can edit and delete their different notes and create new ones whenever they want.
 
 ### Getting Started:
 

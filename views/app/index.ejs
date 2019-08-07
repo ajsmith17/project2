@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Note.js</title>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/index.css">
@@ -38,7 +38,7 @@
             <% let date = notes[i].publishDate; %>
             <p id="date"><%=date.toDateString()%></p>
             <a href="/app/<%=notes[i].id;%>"><h3><%=notes[i].title%></h3></a>
-            
+
             <div class="text">
               <% let string = notes[i].content; %>
               <% let array = string.split(" ", 4); %>

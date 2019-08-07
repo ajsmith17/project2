@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/logInPage.css">
   </head>
   <body>
-    <div class="note">
-      <h3><%=note.title%></h3>
-      <p><%=note.content%></p>
+    <div class="container">
+      <div class="logIn">
+        <div class="pin"></div>
+        <h2><%=note.title%></h2>
+        <p><%=note.content%></p>
+        <div class="holderShow">
+          <button class="newButton" type="button" onclick="window.location.href='/app'">Back</button>
+        </div>
+      </div>
+
     </div>
-    <button type="button" onclick="window.location.href='/app'">Back</button>
   </body>
 </html>

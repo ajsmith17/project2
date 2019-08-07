@@ -1,6 +1,5 @@
 body {
   background-image: url("https://photo-cdn.icons8.com/assets/previews/151/68921a8c-e6e2-44cd-b865-e75b372573801x.jpg");
-
 }
 .container {
   display: flex;
@@ -19,17 +18,15 @@ body {
   display: flex;
   flex-direction: column;
 }
-.greeting {
-  background-color: lightyellow;
-  box-shadow: 2px 3px rgba(0,0,0,.65);
-  font-size: 150%;
-  width: 550px;
-  height: 500px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
 .holder {
-  margin: auto;
+  margin: 50px auto;
+}
+.holderShow {
+  margin: auto 0 auto 130px;
+}
+.row {
+  display: flex;
+  justify-content: flex-end;
 }
 .pin {
   border-radius: 50%;
@@ -40,10 +37,11 @@ body {
   margin-top: 7px;
   background-image: radial-gradient(red 50%, black 100%);
 }
-.text {
-  margin: 70px auto;
+label {
+  font-family: 'Reenie Beanie', cursive;
+  margin-right: 5px;
 }
-h2 {
+h1, h2 {
   font-family: 'Permanent Marker', cursive;
   text-align: center;
 }
@@ -62,8 +60,9 @@ font-weight: bold;
 text-decoration: none;
 background: #ed3330;
 padding: 10px;
-width: 135px;
-margin: 0 auto;
+width: 130px;
+margin-top: 20px;
+margin-left: 75px;
 border-radius: 5px;
 display: inline-block;
 border: none;

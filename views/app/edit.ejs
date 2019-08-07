@@ -3,13 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/newEdit.css">
   </head>
   <body>
-    <form class="" action="/app/<%=note.id%>?_method=PUT" method="POST">
-      <input type="text" name="title" value="<%=note.title%>">
-      <input type="textarea" name="content" value="<%=note.content%>">
-      <input type="submit" value="Save">
-    </form>
-    <button type="button" onclick="window.location.href='/app'">Back</button>
+    <div class="container">
+      <div class="logIn">
+        <h2>Edit Note</h2>
+        <div class="holderNew">
+          <form id="editForm" action="/app/<%=note.id%>?_method=PUT" method="POST">
+
+            <div class="rowNew">
+              <input id="title" type="text" name="title" value="<%=note.title%>">
+            </div><br>
+
+            <div class="rowNew">
+              <textarea id="content" name="content" form="editForm" rows="10" cols="40"><%=note.content%></textarea>
+              <!-- <input type="textarea" name="content" value="<%=note.content%>"> -->
+            </div>
+
+          </form>
+          <div class="buttons">
+            <input class="newButton" type="submit" form="editForm" value="Save">
+            <button class="newButton" type="button" onclick="window.location.href='/app'">Back</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </body>
 </html>

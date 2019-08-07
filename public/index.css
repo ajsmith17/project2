@@ -66,9 +66,6 @@ body {
   margin-bottom: 20px;
   transform: rotate(3deg);
 }
-div p {
-  margin: 0 10px;
-}
 h1 {
   margin-top: 5px;
   background-color: lightyellow;
@@ -83,13 +80,24 @@ span {
   margin-left: 8px;
   margin-right: 3px;
 }
-span a {
+a {
   text-decoration: none;
 }
-span p {
+h3 {
+  margin-left: 10px;
+  text-align: center;
+}
+#date {
+  margin-top: 20px;
+  margin-left: 10px;
   font-family: sans-serif;
   font-size: 50%;
   opacity: 0.5;
+}
+.text p {
+  font-family: 'Reenie Beanie', cursive;
+  margin-left: 10px;
+  text-align: center;
 }
 header {
   height: 70px;
@@ -143,7 +151,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 80px 0 0 40px;
+  margin: 60px 0 0 40px;
 }
 .newButton {
 color: #fff !important;

@@ -3,13 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/newEdit.css">
   </head>
   <body>
-    <form class="" action="/app" method="POST">
-      <input type="text" name="title" placeholder="Title...">
-      <input type="textarea" name="content" placeholder="Content...">
-      <input type="submit" value="Create Note">
-    </form>
-    <button type="button" onclick="window.location.href='/app'">Back</button>
+    <div class="container">
+      <div class="logIn">
+        <h2>New Note</h2>
+        <div class="holderNew">
+          <form id="noteForm" action="/app" method="POST">
+
+            <div class="rowNew">
+              <input id="title" type="text" name="title" placeholder="Title...">
+            </div><br>
+
+            <div class="rowNew">
+              <textarea id="content" name="content" form="noteForm" placeholder="Content..." rows="10" cols="40"></textarea>
+            </div>
+
+          </form>
+          <div class="buttons">
+            <input class="newButton2" type="submit" form="noteForm" value="Create Note"><br>
+            <button class="newButton" type="button" onclick="window.location.href='/app'">Back</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
   </body>
 </html>

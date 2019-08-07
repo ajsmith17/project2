@@ -35,15 +35,17 @@
           <div class="note<%=noteClass%>">
             <div class="pin"></div>
 
-            <span>
-              <a href="/app/<%=notes[i].id;%>"><h3><%=notes[i].title%></h3></a>
-              <% let date = notes[i].publishDate; %>
-              <p><%=date.toDateString()%></p>
-            </span>
-            <% let string = notes[i].content; %>
-            <% let array = string.split(" ", 4); %>
-            <% let final = array.join(" "); %>
-            <p><%=final + '...'%></p>
+            <% let date = notes[i].publishDate; %>
+            <p id="date"><%=date.toDateString()%></p>
+            <a href="/app/<%=notes[i].id;%>"><h3><%=notes[i].title%></h3></a>
+            
+            <div class="text">
+              <% let string = notes[i].content; %>
+              <% let array = string.split(" ", 4); %>
+              <% let final = array.join(" "); %>
+              <p><%=final + '...'%></p>
+            </div>
+
             <div class="buttons">
               <form action="/app/<%=notes[i].id%>?_method=DELETE" method="POST">
                 <input class="noteButton" type="submit" value="DELETE">

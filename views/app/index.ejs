@@ -3,33 +3,62 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/index.css">
   </head>
   <body>
-    <header>
-      <form action="/sessions?_method=DELETE" method="POST">
-        <input class="waves-effect waves-light btn" type="submit" value="Log Out">
-      </form>
-    </header>
-    <button type="button" onclick="window.location.href='/app/new'">New Note</button>
+    <div class="container">
 
-    <% for (let i = 0; i < notes.length; i++) { %>
-      <div class="note">
-        <form action="/app/<%=notes[i].id%>?_method=DELETE" method="POST">
-          <input type="submit" value="X">
-        </form>
-        <button type="button" onclick="window.location.href='/app/<%=notes[i].id%>/edit'">EDIT</button>
-        <span>
-          <a href="/app/<%=notes[i].id;%>"><h3><%=notes[i].title%></h3></a>
-          <% let date = notes[i].publishDate; %>
-          <p><%=date.toDateString()%></p>
-        </span>
-        <% let string = notes[i].content; %>
-        <% let array = string.split(" ", 3); %>
-        <% let final = array.join(" "); %>
-        <p><%=final + '...'%></p>
+      <header>
+        <div class="newNote">
+          <div class="pinYellow"></div>
+          <button class="newButton" type="button" onclick="window.location.href='/app/new'">New Note</button>
+        </div>
+        <div class="headNote">
+          <div class="pinBlue"></div>
+          <h1>NOTE.js</h1>
+        </div>
+        <div class="newNote">
+          <div class="pinYellow"></div>
+          <form id="logOut" action="/sessions?_method=DELETE" method="POST">
+            <input class="newButton" type="submit" value="Log Out">
+          </form>
+        </div>
+
+      </header>
+
+
+      <div class="notes">
+        <% for (let i = 0; i < notes.length; i++) { %>
+          <% let noteClass = Math.floor(Math.random() * 4); %>
+          <div class="note<%=noteClass%>">
+            <div class="pin"></div>
+
+            <span>
+              <a href="/app/<%=notes[i].id;%>"><h3><%=notes[i].title%></h3></a>
+              <% let date = notes[i].publishDate; %>
+              <p><%=date.toDateString()%></p>
+            </span>
+            <% let string = notes[i].content; %>
+            <% let array = string.split(" ", 4); %>
+            <% let final = array.join(" "); %>
+            <p><%=final + '...'%></p>
+            <div class="buttons">
+              <form action="/app/<%=notes[i].id%>?_method=DELETE" method="POST">
+                <input class="noteButton" type="submit" value="DELETE">
+              </form>
+              <button class="noteButton" type="button" onclick="window.location.href='/app/<%=notes[i].id%>/edit'">EDIT</button>
+            </div>
+
+          </div>
+        <% } %>
       </div>
-    <% } %>
-
+    </div>
+    <!-- <footer>
+      <div class="footNote">
+        <p>Created by: Aaron Smith</p>
+      </div>
+    </footer> -->
   </body>
 </html>

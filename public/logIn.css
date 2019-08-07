@@ -1,0 +1,65 @@
+body {
+  background-image: url("https://photo-cdn.icons8.com/assets/previews/151/68921a8c-e6e2-44cd-b865-e75b372573801x.jpg");
+
+}
+.container {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 100px auto;
+}
+.logIn {
+  background-color: lightyellow;
+  box-shadow: 2px 3px rgba(0,0,0,.65);
+  font-size: 150%;
+  width: 500px;
+  height: 500px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.greeting {
+  background-color: lightyellow;
+  box-shadow: 2px 3px rgba(0,0,0,.65);
+  font-size: 150%;
+  width: 500px;
+  height: 500px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.holder {
+  margin: auto;
+}
+.pin {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  box-shadow: 2px 3px rgba(0,0,0,.4);
+  margin: 0 auto;
+  margin-top: 7px;
+  background-image: radial-gradient(red 50%, black 100%);
+}
+.newButton {
+color: #fff !important;
+text-transform: uppercase;
+font-family: 'Reenie Beanie', cursive;
+font-size: 140%;
+font-weight: bold;
+text-decoration: none;
+background: #ed3330;
+padding: 10px;
+width: 120px;
+margin: 0 auto;
+border-radius: 5px;
+display: inline-block;
+border: none;
+cursor: pointer;
+transition: all 0.4s ease 0s;
+}
+.newButton:hover {
+background: #434343;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
